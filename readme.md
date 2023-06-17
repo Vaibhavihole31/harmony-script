@@ -2,11 +2,11 @@
 
 A mostly reasonable approach to JavaScript involves following best practices, writing clean and modular code, and utilizing appropriate design patterns. 🏆👉 
 
-## types
+# Types
 
 Understand the different types in JavaScript, including primitives and complex types.
 
-#### Primitives
+## Primitives
 
 Primitives are basic types in JavaScript. When you work with a primitive type, you directly manipulate its value. The following are the primitive types in JavaScript:
 
@@ -40,7 +40,7 @@ console.log(typeof bigInt); // Output: bigint
 
 In this example, we define variables of each primitive type and use the `typeof` operator to determine their respective types. The `console.log` statements show the outputs when printing the types.
 
-#### Complex Types
+## Complex Types
 
 Complex types refer to values that are composed of multiple components. When you work with complex types, you manipulate a reference to their value. The following are the complex types in JavaScript:
 
