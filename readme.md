@@ -74,7 +74,7 @@ The `typeof` operator is used to determine the types of `obj`, `arr`, and `func`
 
 # Effective Variable Usage in JavaScript
 
-1. **Use `const` for all of your references**
+## 1. Use `const` for all of your references
 
 * When declaring variables that won't be reassigned, use const.
 
@@ -87,7 +87,7 @@ const a = 1;
 const b = 2;
 ```
 
-2. **Use `let` if you need to reassign references**
+## 2. **Use `let` if you need to reassign references**
 
 * If you need to reassign a reference, use `let` instead of `var`.
 
@@ -102,7 +102,7 @@ if (true) {
 }
 ```
 
-3. Block scope with `const`, `let`, and `var`
+## 3. **Block scope with `const`, `let`, and `var`**
 
 * Both `const` and `let` are block-scoped, which means they only exist within the block they are defined in.
 
