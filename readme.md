@@ -1,0 +1,1 @@
+## HarmonyScript: A Harmonious Journey through JavaScript's Best Practices
