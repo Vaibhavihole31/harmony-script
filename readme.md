@@ -71,3 +71,54 @@ console.log(typeof func);    // Output: function
 In this example, we define variables of each complex type. `obj` represents an object with properties for `name`, `age`, and `city`. `arr` represents an array with three elements. `func` represents a function that logs `Hello!` to the console.
 
 The `typeof` operator is used to determine the types of `obj`, `arr`, and `func`. The `console.log` statements show the outputs when printing the types.
+
+# Effective Variable Usage in JavaScript
+
+1. **Use `const` for all of your references**
+
+* When declaring variables that won't be reassigned, use const.
+
+* Using `const` ensures that you can't accidentally reassign the reference, leading to more predictable and bug-free code.
+
+* Examples:
+
+```js
+const a = 1;
+const b = 2;
+```
+
+2. **Use `let` if you need to reassign references**
+
+* If you need to reassign a reference, use `let` instead of `var`.
+
+* `let` is block-scoped, meaning it is limited to the block where it's defined, unlike `var` which is function-scoped.
+
+* Examples:
+
+```js
+let count = 1;
+if (true) {
+  count += 1;
+}
+```
+
+3. Block scope with `const`, `let`, and `var`
+
+* Both `const` and `let` are block-scoped, which means they only exist within the block they are defined in.
+
+* `var`, on the other hand, is function-scoped.
+
+* Examples:
+
+```js
+{
+  let a = 1;
+  const b = 1;
+  var c = 1;
+}
+console.log(a); // ReferenceError
+console.log(b); // ReferenceError
+console.log(c); // Prints 1
+```
+
+In the above code, `a` and `b` will produce a `ReferenceError` because they are block-scoped, while `c` can be accessed because it is function-scoped.
