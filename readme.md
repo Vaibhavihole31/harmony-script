@@ -122,3 +122,129 @@ console.log(c); // Prints 1
 ```
 
 In the above code, `a` and `b` will produce a `ReferenceError` because they are block-scoped, while `c` can be accessed because it is function-scoped.
+
+# Object Creation
+
+Use the literal syntax for object creation
+
+Instead of using the **`new Object()`** syntax, it is recommended to use the curly braces **`{}`** to create objects.
+
+**Bad Code :**
+
+```js
+const item = new Object();
+```
+
+**Good Code :**
+
+```js
+const item = {};
+```
+
+## Computed Property Names
+
+Use computed property names when creating objects with dynamic property names
+Computed property names allow you to define object properties dynamically using variables or function calls.
+
+
+```js
+function getKey(k) {
+  return `a key named ${k}`;
+}
+
+// Bad
+const obj = {
+  id: 5,
+  name: 'San Francisco',
+};
+obj[getKey('enabled')] = true;
+
+// Good
+const obj = {
+  id: 5,
+  name: 'San Francisco',
+  [getKey('enabled')]: true,
+};
+```
+
+In the bad example, the property name is assigned separately using square brackets. In the good example, the property name is computed directly within the object literal using square brackets.
+
+## Object Method Shorthand
+
+When defining methods in an object, you can use the shorthand syntax instead of the traditional function syntax.
+
+**Bad Code :**
+
+```js
+const atom = {
+  value: 1,
+
+  addValue: function (value) {
+    return atom.value + value;
+  },
+};
+```
+
+**Good Code :**
+
+```js
+const atom = {
+  value: 1,
+
+  addValue(value) {
+    return atom.value + value;
+  },
+};
+```
+In the good example, the addValue method is defined using the shorthand syntax. It makes the code shorter and easier to read.
+
+## Property Value Shorthand
+
+When the property name and variable name are the same, you can use the property value shorthand syntax.
+
+```js
+const lukeSkywalker = 'Luke Skywalker';
+
+// Bad
+const obj = {
+  lukeSkywalker: lukeSkywalker,
+};
+
+// Good
+const obj = {
+  lukeSkywalker,
+};
+```
+
+In the bad example, the property name and variable name are repeated. In the good example, the property value shorthand is used to simplify the object literal.
+
+## Grouped Shorthand Properties
+
+When using shorthand properties, it is recommended to group them at the beginning of the object declaration. This makes it easier to identify which properties are using the shorthand syntax.
+
+```js
+const anakinSkywalker = 'Anakin Skywalker';
+const lukeSkywalker = 'Luke Skywalker';
+
+// Bad
+const obj = {
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  lukeSkywalker,
+  episodeThree: 3,
+  mayTheFourth: 4,
+  anakinSkywalker,
+};
+
+// Good
+const obj = {
+  lukeSkywalker,
+  anakinSkywalker,
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  episodeThree: 3,
+  mayTheFourth: 4,
+};
+```
+
+In the bad example, the shorthand property **lukeSkywalker** is mixed with other properties. In the good example, all shorthand properties are grouped together, making them easier to locate.
