@@ -2,6 +2,12 @@
 
 A mostly reasonable approach to JavaScript involves following best practices, writing clean and modular code, and utilizing appropriate design patterns. 🏆👉 
 
+## Table of Contents
+
+  1. [Types](#types)
+  2. [Effective Variable Usage in JavaScript](#effective-variable-usage-in-javascript)
+  3. [Object Creation](#object-creation)
+
 # Types
 
 Understand the different types in JavaScript, including primitives and complex types.
@@ -248,3 +254,5 @@ const obj = {
 ```
 
 In the bad example, the shorthand property **lukeSkywalker** is mixed with other properties. In the good example, all shorthand properties are grouped together, making them easier to locate.
+
+
