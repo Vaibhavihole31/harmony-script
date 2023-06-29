@@ -1,4 +1,4 @@
-## HarmonyScript: A Harmonious Journey through JavaScript's Best Practices
+## HarmonyScript: A Harmonious Journey through JavaScript's Best Practices 🏆👉 
 
 A mostly reasonable approach to JavaScript involves following best practices, writing clean and modular code, and utilizing appropriate design patterns. 🏆👉 
 
@@ -7,6 +7,7 @@ A mostly reasonable approach to JavaScript involves following best practices, wr
   1. [Types](#types)
   2. [Effective Variable Usage in JavaScript](#effective-variable-usage-in-javascript)
   3. [Object Creation](#object-creation)
+
 
 # Types
 
